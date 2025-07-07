@@ -1,0 +1,226 @@
+@import url('main.css');
+@import url('about.css');
+@import url('portfolio.css');
+@import url('footer.css');
+@import url('carrossel.css');
+@import url('instagram.css');
+@import url('modal.css');
+
+:root {
+    --shadow: #7a718c;
+    --high-light: #d4c4f1;
+    --color-black: #1a1a1a;
+    --color-white: #f7f7f7;
+    --bg-primary: #c7b3f2;
+    --bg-secondary: #bfa7f1;
+}
+
+*::selection {
+    background-color: var(--shadow);
+    color: var(--high-light);
+}
+
+*::-moz-selection {
+    background-color: var(--shadow);
+    color: var(--high-light);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--color-white);
+    font-family: "Urbanist", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Space Grotesk", sans-serif;
+}
+
+/* Firefox */
+* {
+    scrollbar-width: none;
+    scrollbar-color: var(--shadow) rgba(0, 0, 0, 0.2);
+}
+
+/* Webkit */
+*::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+*::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: var(--shadow);
+    border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: var(--shadow);
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, var(--shadow), var(--bg-primary), var(--high-light), var(--bg-secondary));
+    width: min-content;
+    text-wrap: nowrap;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    background-clip: text;
+    color: transparent;
+}
+
+.marker-text {
+    background-color: var(--shadow);
+    color: var(--high-light);
+}
+
+.btn-next {
+    position: absolute;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+
+    bottom: 2rem;
+    right: 2rem;
+
+    border-radius: 50%;
+    padding: 0.5rem;
+
+    animation: btn-wave 2s alternate-reverse infinite ease-in-out;
+}
+
+.next-white {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.next-white::after {
+    content: "";
+    position: absolute;
+    top: 0.65rem;
+    left: 0.65rem;
+    width: 16px;
+    height: 16px;
+    border-bottom-right-radius: 0.25rem;
+    border-right: 5px solid var(--color-white);
+    border-bottom: 5px solid var(--color-white);
+}
+
+.next-primary::after {
+    content: "";
+    position: absolute;
+    top: 0.65rem;
+    left: 0.65rem;
+    width: 16px;
+    height: 16px;
+    border-bottom-right-radius: 0.25rem;
+    border-right: 5px solid var(--color-white);
+    border-bottom: 5px solid var(--color-white);
+}
+
+.next-primary {
+    background-color: #c7b3f2a9;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+.gap-middle {
+    gap: 1rem;
+}
+
+.mobile-only {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .mobile-only {
+        display: block;
+    }
+}
+
+@keyframes btn-wave {
+    from {
+        transform: rotate(45deg) translateX(0) translateY(0);
+    }
+
+    to {
+        transform: rotate(45deg) translateX(-5px) translateY(-5px);
+    }
+}
+
+/* From Uiverse.io by vinodjangid07 */
+
+/* for all social containers*/
+.socialContainer {
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    background-color: var(--bg-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: .3s;
+}
+
+/* instagram*/
+.containerOne:hover {
+    background-color: var(--shadow);
+    transition-duration: .3s;
+}
+
+/* Whatsapp*/
+.containerFour:hover {
+    background-color: var(--shadow);
+    transition-duration: .3s;
+}
+
+.socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: .3s;
+}
+
+.socialSvg {
+    width: 17px;
+}
+
+.socialSvg path {
+    fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+    animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

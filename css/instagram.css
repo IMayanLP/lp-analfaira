@@ -1,0 +1,51 @@
+.instagram-card {
+    height: 100%;
+    width: 320px;
+    background-color: white;
+    padding: 0;
+
+    border-radius: 0.5rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.instagram-card .user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1rem 0.5rem 1rem;
+}
+
+.instagram-card .user img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    clip-path: circle(50%);
+}
+
+.instagram-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+}
+
+.instagram-card-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.instagram-card .details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem 1rem 1rem;
+}
+
+@media (max-width: 860px) {
+    .instagram-card {
+        width: 300px;
+    }
+}
