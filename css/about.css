@@ -57,6 +57,7 @@
 }
 
 .content .about-footer span {
+    font-size: 18px;
     max-width: 500px;
     text-align: center;
 }
